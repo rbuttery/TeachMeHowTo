@@ -5,6 +5,8 @@ import openai
 # OpenAI API key setup
 openai.api_key = os.environ['OPENAI_API_KEY']
 
+st.set_page_config(page_title="Teach me how to...", page_icon="🤖")
+
 # Function to generate response from OpenAI's Completion API
 # Cache the result to avoid repetitive calculations
 @st.cache
