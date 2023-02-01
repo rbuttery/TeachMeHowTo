@@ -57,13 +57,6 @@ if TEACH_ME_HOW_TO:
 
 # Try to display the AI response if it exists in the session state
 try:
-    st.markdown(
-        ask(f'Identify & List the first step in this guide. Give a 2 minute explanation in great detail, give examples make it relavent to anyone trying to learn: {get_variable("AI_RESPONSE")}'), unsafe_allow_html=True)
-except KeyError:
-    pass
-
-# Try to display the AI response if it exists in the session state
-try:
     num_steps = ask(f'How many steps are there here? please return only an integer. {get_variable("AI_RESPONSE")}')
 
     for i in range(int(num_steps)):
